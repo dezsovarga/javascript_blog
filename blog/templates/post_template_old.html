@@ -1,0 +1,14 @@
+<div class="post" ng-repeat="blog in blogPosts | orderBy:'postedAt'">
+	<h2>
+		<a href="single_item.html?id={{blog.id}}">{{blog.summary}} </a>
+	</h2>
+	<p>	Date: {{blog.postedAt | date}}</p>
+	<p>	Author: {{blog.postedBy}}</p>
+	<br>
+	<p>{{blog.description}}</p>
+	<p hidden="">1</p>
+	<a class="right" href="single_item.html?id={{blog.id}}">View more</a>
+	<br><br>
+	<div> <hr> </div>
+	
+</div>

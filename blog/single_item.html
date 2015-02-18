@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+		
+	<div class="nav">
+		<h1 class="blog_title">My Blog	</h1>
+		
+		
+		<div id="authentication" class="login">	
+				<!-- Welcome 
+				<span class="user">
+					<a id ="logged_in_user" href="admin_profile.html"></a>
+				</span>
+				<a href="homepage.html">Logout</a> -->
+		</div>
+		
+		<a href="http://localhost:8080/#/admin">< Back to list</a>
+		
+	</div>	
+	
+	<div id = "post_container" class="post_container">
+		
+		
+	
+	</div>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="http://documentcloud.github.io/underscore/underscore-min.js" type="text/javascript"></script>
+	<script src="templates/TemplateModule.js"></script>
+
+	<script src="detailed_post_view.js"></script>	
+	
+	<script src="namespace.js"></script>
+	<script src="validators/validations.js"></script>
+	
+	<script src="validators/Validator.js"></script>
+	<script src="validators/LoginValidator.js"></script>
+	<script src="validators/CommentValidator.js"></script>
+	<script src="errors/InvalidCommentError.js"></script>
+	<script src="errors/InvalidCredentialError.js"></script>
+	<script src="models/Entity.js"></script>
+	<script src="models/Comment.js"></script>
+	<script src="models/User.js"></script>
+	<script src="controllers/CommentController.js"></script>
+
+	<script src="controllers/UserController.js"></script>
+	<script src="login.js"></script>
+
+	<script src="init_single_item_html.js"></script>
+</body>
+
+</html>

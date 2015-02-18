@@ -1,0 +1,33 @@
+<a href="#/home">< Back to list</a>
+<div class="post_container" >
+  <div class="post">
+    <h2><a href="#/article/{{blog.id}}">{{blog.summary}}</a></h2>
+    <p>Date: {{blog.postedAt | date}}</p>
+    <p>Author: {{blog.postedBy}}</p>
+    <p>{{blog.description}}</p>
+    <p hidden=""></p>
+    <br>
+    <div class="comment_section">
+      <div class="comments_container" >
+          
+          <div ng-repeat="comment in blog.comments">
+            
+            <div comment-directive="" comment="comment">
+            </div>
+          
+          </div>
+      
+      </div>
+
+      <div class="write_comment">
+        <div class="comment_area">
+          <p>Write Comment:</p>
+          <textarea id="comment_textarea" class="comment_textarea" rows="4" cols="50"></textarea>
+        </div>
+        <label class="comment_area">Name:</label>
+        <input id="comment_author" type="text" name="author">
+        <button id="send_comment_button" ng-click="addComment()" type="button">Send</button>
+      </div>
+    </div>
+  </div>
+</div>

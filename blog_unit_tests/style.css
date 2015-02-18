@@ -1,0 +1,171 @@
+#draggable_chat_box { 
+	width: 300px; 
+	height: 350px; 
+	position: absolute;
+	right:    0;
+	bottom:   0;
+	border: 2px solid #a1a1a1;
+	background: #dddddd;
+	
+
+}
+
+#chat_body{
+	position: absolute;
+	overflow-y: auto;
+	width: 99%;
+	height: 310px; 
+}
+
+
+#chat_box_header{
+	width: 300px; 
+	height: 30px; 
+	
+	background-color: blue;
+
+}
+
+#input_chat_message{
+	width: 78%;
+	position: absolute;
+	left:    0;
+	bottom:   0;
+}
+
+#send_chat_message{
+	width: 20%;
+	position: absolute;
+	right:    0;
+	bottom:   0;
+}
+
+.right{
+	
+	float: right;
+
+}
+.left{
+	
+	float: left;
+}
+
+
+h2 {
+    text-decoration: underline;
+}
+
+.nav{
+	height: 100px;
+	position: relative;
+}
+
+.login {
+	top: 50%;
+	margin-top: -11px;
+	height: 22px;
+	position: absolute;
+	right: 0;
+}
+
+.blog_title{
+	margin: 0;
+	line-height: 100px;
+}
+
+.user{
+	text-decoration: underline;
+	margin: 10px;
+	color: black;
+}
+
+.post {
+	margin-top: 50px;
+}
+
+.edit_post{
+	margin-top: 50px;
+	margin-bottom: 40px;
+}
+
+body{
+	font-family: "Comic Sans MS";
+}
+
+.edit_element{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.edit_element_label{
+	width: 9%;
+	display: inline-block;
+	
+}
+.edit_element_data{
+	width: 90%;
+	//float: right;
+	
+}
+.profile{
+	width: 20%;
+	
+	
+}
+.edit_element_settings{
+	margin-left: 10%;
+}
+
+.comment_section:after {
+     visibility: hidden;
+     display: block;
+     font-size: 0;
+     content: " ";
+     clear: both;
+     height: 0;
+	 
+}
+.comment_section{
+	border-style: solid;
+	width: 100%;
+}
+.comment{
+	width: 100%;
+	display: inline-block;
+}
+.avatar{
+	float: left;
+	width: 20%;
+}
+
+.comment_body{
+	float: right;
+	width: 80%;
+}
+.comment_header{
+	width: 100%;
+}
+.comments_container{
+	width: 50%;
+	float: left;
+}
+.write_comment{
+	width: 50%;
+	float: right;
+	
+	
+}
+.comment_area{
+	margin-left :20px;
+}
+.post_container{
+	width: 95%;	
+	padding: 50px;
+}
+a:hover { 
+    color: orange;
+}
+
+.comment_textarea{
+	width: 95%;
+}

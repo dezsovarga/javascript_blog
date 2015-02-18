@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Blog</title>
+  <link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+	<div class="nav">
+		<h1 class="blog_title">My Blog	</h1>
+		
+		
+			<div class="login">	
+				Welcome 
+				<span class="user">
+					<a id ="logged_in_user" href="admin_profile.html"></a>
+				</span>
+				<a href="homepage.html">Logout</a>
+			</div>
+			
+		<a href="admin.html">< Back to list</a>
+		
+	</div>	
+		
+ 	
+	
+	<div class ="edit_post">
+		
+		<div class="edit_element">
+			<label class="edit_element_label" for="post_title">	Title </label> 
+			<input class="edit_element_data" type="text" id="post_title" name="post_title" value="">
+		</div>
+		
+		<div class="edit_element">
+			<label class="edit_element_label" for="author">	Author </label> 
+			<input type="text" id="author" name="author" value="" disabled>
+		</div>
+		
+		<div class="edit_element">
+			<label class="edit_element_label" for="post_date">	Date </label> 
+			<input id="post_date">
+		</div>
+		
+		<div class="edit_element">
+			<label class="edit_element_label">	Description </label> 
+			<textarea id ="description" class="edit_element_data" rows="4" cols="50"></textarea>
+		</div>
+		
+	
+		<div class="edit_element_settings">
+			
+			<input id ="allow_comments_checkbox" type="checkbox" checked/> 
+			<label class="edit_element_label">	Allow Comments </label> 
+		</div>
+		
+		<div class="edit_element_settings">
+			
+			<input id ="visible_checkbox" type="checkbox" checked/> 
+			<label class="edit_element_label">	Visible </label> 
+		</div>
+		
+		<div class="edit_element_settings">
+			<span class="left">
+				<button id="add_new_post"  type="button">Save</button>
+				<button type="button">Cancel</button>
+			</span>
+						
+		</div>
+		
+	</div>
+
+	<div id="post_dialog">
+		
+	</div>
+	
+	<script src="namespace.js"></script>
+	<script src="validators/Validator.js"></script>
+	<script src="validators/PostValidator.js"></script>
+	<script src="errors/InvalidBlogPostError.js"></script>	
+	<script src="validators/validations.js"></script>
+	<script src="addNewPost.js"></script>
+	<script src="login.js"></script>
+	<script src="models/Entity.js"></script>
+	<script src="models/Post.js"></script>
+	<script src="controllers/PostController.js"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+
+	<script>	
+
+		updateLoggedInUserName();
+		initializeAuthor();
+
+		postCtrl = new App.Controllers.PostController();
+
+		window.onload = function() {
+			 postCtrl.attachEvents();
+			 $("#post_date").datepicker();
+		}
+	</script>
+</body>
+
+</html>

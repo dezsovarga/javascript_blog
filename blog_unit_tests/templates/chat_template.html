@@ -1,0 +1,16 @@
+<div id="draggable_chat_box" class="ui-widget-content">
+ 	<div id="chat_box_header">  </div>
+ 	
+ 	<div id="chat_body">
+ 		<span  ng-repeat="message in messages">
+ 			{{message}}
+ 			<hr>
+ 		</span>
+
+ 	</div>
+
+ 	<form name="sendMessageForm">
+ 		<input id="input_chat_message" ng-model="messageText" placeholder="Type your message here">
+ 		<input id="send_chat_message" ng-click="sendMessage()" type="submit" value="Send" />
+ 	</form>
+</div>

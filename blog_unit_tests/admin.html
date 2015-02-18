@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Blog</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+	<div class="nav">
+		<h1 class="blog_title">My Blog	</h1>
+		
+		
+			<div class="login">	
+				Welcome 
+				<span class="user">
+					<a id ="logged_in_user" href="admin_profile.html"></a>
+				</span>
+				<a id="logoutButton" href="#">Logout</a>
+			</div>
+		<a href="admin_new.html"> <button type="button">New Blog post</button> </a> 	
+	
+		
+	</div>	
+		
+ 	<div id = "post_container" class="post_container">
+	
+	<!-- <div class ="post">
+		<h2><a href="single_item.html">Post title 1</a></h2>
+		<p>	Date: 2015/01/29 </p>
+		<p>	Author: Gigel Popescu </p>
+		
+		<p>The first web browsers had support for text only, limited to a single font in a single color. 
+			Later came browsers with support for colors and fonts, and even support for pictures! 
+			The first web browsers had support for text only, limited to a single font in a single color. 
+			Later came browsers with support for colors and fonts, and even support for pictures! 
+			The first web browsers had support for text only, limited to a single font in a single color. 
+			
+		</p>
+		<div class="right">
+			<a href="admin_edit.html"> <button type="button">Edit</button> </a> 
+			<button type="button">Delete</button>
+		</div>
+		<br>
+		<hr>
+	</div>
+	
+	<div class ="post">
+		<h2><a href="single_item.html">Post title 2</a></h2>
+		<p>	Date: 2015/01/29 </p>
+		<p>	Author: Gigel Popescu </p>
+		
+		<p>The first web browsers had support for text only, limited to a single font in a single color. 
+			Later came browsers with support for colors and fonts, and even support for pictures! 
+			The first web browsers had support for text only, limited to a single font in a single color. 
+			Later came browsers with support for colors and fonts, and even support for pictures! 
+			The first web browsers had support for text only, limited to a single font in a single color. 
+			
+		</p>
+		
+		<div class="right">
+			<a href="admin_edit.html"> <button type="button">Edit</button> </a> 
+			<button type="button">Delete</button>
+		</div>
+		
+	</div> -->
+	</div>
+
+	<div id="confirm_delete_dialog">
+	</div>
+	
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>
+	<script src="http://documentcloud.github.io/underscore/underscore-min.js" type="text/javascript"></script>
+	<script src="templates/TemplateModule.js"></script>
+	<script src="namespace.js"></script>
+	<script src="login.js"></script>
+	<script src="initializeBlogs.js"></script>
+	
+	<script src="models/Entity.js"></script>
+	<script src="models/User.js"></script>
+	<script src="models/Post.js"></script>
+	<script src="controllers/UserController.js"></script>
+	<script src="controllers/PostController.js"></script>
+	
+	
+
+	<script src="init_admin_page.js"></script>
+</body>
+
+</html>

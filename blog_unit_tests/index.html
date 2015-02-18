@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html ng-app="BlogApp">
+<head>
+  <title>My Blog</title>
+  <link rel="stylesheet" href="style.css">
+
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular-cookies.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0-beta.2/angular-route.min.js"></script>	
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/sockjs-client/0.3.4/sockjs.min.js"></script>
+
+	<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+	<script src="http://documentcloud.github.io/underscore/underscore-min.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.2/themes/base/jquery-ui.css" />
+	
+	<script src="http://code.jquery.com/ui/1.9.2/jquery-ui.js"></script>	
+
+	
+	
+    
+    <script src="modules/BlogApp.js"></script>
+    <script src="services/blogs.js"></script>
+
+    <script src="modules/homePageModule/homePageModule.js"></script>
+    <script src="modules/PostModule/postModule.js"></script>
+    <script src="modules/loginModule/LoginModule.js"></script>
+    <script src="modules/loginModule/loginController.js"></script>
+    <script src="modules/chatController.js"></script>
+    
+    
+    
+
+</head>
+
+<body >
+
+	<div id="local_Storage">
+	
+	</div>
+	
+	<div class="nav" ng-controller="loginController">
+		<h1 class="blog_title">My Blog	</h1>		
+
+		<div id="authentication" class="login" ng-show="!isLoggedIn">
+
+			<form  action="admin.html" onsubmit="return false">
+
+				<input type="text" name="username" id="username" ng-model="username" placeholder="Username"  >
+				<input type="password" name="password" id="password" ng-model="password" placeholder="Password"  >
+				<input id="login_button" ng-click="doLogin()" type="submit" value="Login" >
+				
+			</form>		
+
+		</div>
+
+		<div class="login" ng-show="isLoggedIn">	
+			Welcome 
+			<span class="user">
+				<a id ="logged_in_user" href="#/admin/profile">{{loggedInUser}}</a>
+			</span>
+			<a id="logoutButton" ng-click="doLogout()" href="">Logout</a>
+		</div>
+				
+		
+	</div>
+
+	<div  ng-view="">
+		
+	</div>	
+	
+ 	
+	<!-- <div id = "post_container" class="post_container">
+	
+	 <div class ="post">
+		<h2><a href="single_item.html">Post title 1</a></h2>
+		<p>	Date: 2015/01/29 </p>
+		<p>	Author: Gigel Popescu </p>
+		
+		<p>The first web browsers had support for text only, limited to a single font in a single color. 
+			Later came browsers with support for colors and fonts, and even support for pictures! 
+			The first web browsers had support for text only, limited to a single font in a single color. 
+			Later came browsers with support for colors and fonts, and even support for pictures! 
+			The first web browsers had support for text only, limited to a single font in a single color. 
+			
+		</p>
+		
+		<a class="right" href="single_item.html">View more</a>
+		<br>
+		<hr>
+	</div>
+	
+	<div class ="post">
+		<h2><a href="single_item.html">Post title 2</a></h2>
+		<p>	Date: 2015/01/29 </p>
+		<p>	Author: Gigel Popescu </p>
+		
+		<p>The first web browsers had support for text only, limited to a single font in a single color. 
+			Later came browsers with support for colors and fonts, and even support for pictures! 
+			The first web browsers had support for text only, limited to a single font in a single color. 
+			Later came browsers with support for colors and fonts, and even support for pictures! 
+			The first web browsers had support for text only, limited to a single font in a single color. 
+			
+		</p>
+		
+		<a class="right" href="single_item.html">View more</a>
+		
+	</div>
+	 
+	</div> -->
+	
+	
+	
+</body>
+
+</html>

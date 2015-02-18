@@ -1,0 +1,54 @@
+<form name="addNewPostForm">
+	<div class ="edit_post">
+			
+		<div class="edit_element">
+			<label class="edit_element_label" for="post_title">	Title </label> 
+			<input class="edit_element_data" type="text" id="post_title" name="post_title" ng-model="formModel.title" ng-required="true"  ng-pattern="/^[a-z0-9, ]+$/"/"/>
+			<span ng-style="{'color': addNewPostForm.post_title.$invalid && addNewPostForm.post_title.$dirty ? 'red' : 'green' }">
+				<span ng-show="addNewPostForm.post_title.$error.required && addNewPostForm.post_title.$dirty">  Empty summary </span>
+				<span ng-show="addNewPostForm.post_title.$error.pattern && addNewPostForm.post_title.$dirty">  Summary contains invalid characters </span>
+			</span>
+		</div>
+		
+		<div class="edit_element">
+			<label class="edit_element_label" for="author">	Author </label> 
+			<input type="text" id="author" ng-model="formModel.author" name="author" value="" disabled>
+		</div>
+		
+		<div class="edit_element">
+			<label class="edit_element_label" for="post_date">	Date </label> 
+			<input id="post_date" ng-model="formModel.date">
+		</div>
+		
+		<div class="edit_element">
+			<label class="edit_element_label">	Description </label> 
+			<textarea id ="description" ng-model="formModel.description" ng-required="true" ng-minlength="formModel.descriptionMin" name="description" class="edit_element_data" rows="4" cols="50"></textarea>
+			<span ng-style="{'color': addNewPostForm.description.$invalid && addNewPostForm.description.$dirty ? 'red' : 'green' }">
+				<span ng-show="addNewPostForm.description.$error.required && addNewPostForm.description.$dirty">  Empty description </span>
+				<span ng-show="addNewPostForm.description.$error.minlength && addNewPostForm.description.$dirty">  Description length less than 400 chars </span>
+			</span>
+		</div>
+		
+
+		<div class="edit_element_settings">
+			
+			<input id ="allow_comments_checkbox" ng-model="formModel.allowComments" type="checkbox" checked/> 
+			<label class="edit_element_label">	Allow Comments </label> 
+		</div>
+		
+		<div class="edit_element_settings">
+			
+			<input id ="visible_checkbox" ng-model="formModel.visible" type="checkbox" checked/> 
+			<label class="edit_element_label">	Visible </label> 
+		</div>
+		
+		<div class="edit_element_settings">
+			<span class="left">
+				<button id="add_new_post"  ng-click="savePost($event)" type="button">Save</button>
+				<button type="button" ng-click="cancel()">Cancel</button>
+			</span>
+						
+		</div>
+			
+	</div>
+</form>

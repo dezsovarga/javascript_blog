@@ -1,0 +1,24 @@
+<a href="/#/article/create"> <button type="button">New Blog post</button> </a> 
+<div class="post_container" >
+
+	<div class="post" ng-repeat="blog in filteredBlogs ">
+		
+		<h2>
+		<a href="#/article/{{blog.id}}">{{blog.summary}}</a>
+		</h2>
+		<p>	Date: {{blog.postedAt | date}}</p>
+		<p>	Author: {{blog.postedBy}}</p>
+		<p>{{blog.description}}</p>
+		<p hidden="">1</p>
+
+		<div class='right'> 	 
+			<a href='admin_edit.html?id={{blog.id}}'>
+			<button type='button'>Edit</button></a> 	
+			<button name='delete_post_button' id='deletePostButton_{{blog.id}}' type='button'>Delete</button>	
+		</div> 	
+
+		<br><br>
+		<div> <hr> </div>
+	</div>
+
+</div>
